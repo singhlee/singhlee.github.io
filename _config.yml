@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "singhlee"
 description              : "技术分享"
 url                      : "https://singhlee.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : ""# the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -96,12 +96,12 @@ author:
   name             : "singhlee"
   avatar           : "/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : " 程序员"
-  location         : "Somewhere"
-  email            :
+  location         : "ChangSha,China"
+  email            : singhlee@qq.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "singhlee@qq.com"
+      url: mailto:singhlee@qq.com
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -112,7 +112,7 @@ author:
     #   icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fas fa-fw fa-github"
       url: "https://github.com/singhlee"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
@@ -123,9 +123,9 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "singhlee@qq.com"
+      url: mailto:singhlee@qq.com
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fas fa-fw fa-github"
       url: "https://github.com/singhlee"
 
 # Reading Files
@@ -228,10 +228,12 @@ whitelist:
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /categories/
+  path: /interview/
 tag_archive:
   type: liquid
   path: /tags/
+
+
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -252,6 +254,10 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  knowledge:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -266,3 +272,13 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _knowledge
+  - scope:
+      path: ""
+      type: knowledge
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+
