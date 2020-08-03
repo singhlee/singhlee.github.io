@@ -1,8 +1,8 @@
 ---
-title:  "JVM面试题"
+title:  "基础知识面试题"
 modified: 2020-08-03T20:03:49
 categories: 
-  - 基础知识
+  - java基础知识
 tags:
   - java基础知识
   - 面试题
